@@ -105,11 +105,20 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe all sections and cards
 document.addEventListener('DOMContentLoaded', () => {
-    // Observe project cards
+    // Observe project cards with fade-in animation
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.1}s`;
-        observer.observe(card);
+        card.style.animationDelay = `${index * 0.15}s`;
+        // Add animate-in class when card comes into view
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    cardObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        cardObserver.observe(card);
     });
     
     // Observe experience cards
