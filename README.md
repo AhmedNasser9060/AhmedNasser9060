@@ -12,7 +12,7 @@
 
 ## 👋 About Me
 
-I’m an **AI Engineer with 3+ years of hands-on experience** building **end-to-end AI solutions** — from raw data and model training to **production-ready APIs and cloud deployment**.
+I’m an **AI Engineer with 3+ years of hands-on experience** building **end-to-end AI solutions** — from raw data and model training to **deployment-ready models and cloud deployment**.
 
 I specialize in:
 - Machine Learning & Deep Learning  
@@ -165,4 +165,5 @@ Feel free to reach out 👇
 ---
 
 ⭐ *If you like my work, don’t forget to star the repositories!*  
+
 
