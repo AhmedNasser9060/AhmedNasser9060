@@ -1,182 +1,166 @@
-// Dark Mode Toggle
-const themeToggle = document.getElementById('theme-toggle');
-const sunIcon = document.getElementById('sun-icon');
-const moonIcon = document.getElementById('moon-icon');
+const root = document.documentElement;
+const themeToggle = document.getElementById("theme-toggle");
+const themeLabel = document.getElementById("theme-label");
+const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+const navLinks = document.querySelectorAll(".nav-link");
+const sections = document.querySelectorAll("section[id]");
+const contactForm = document.getElementById("contact-form");
 
-// Check for saved theme preference or default to light mode
-const currentTheme = localStorage.getItem('theme') || 'light';
-document.documentElement.classList.toggle('dark', currentTheme === 'dark');
+const savedTheme = localStorage.getItem("theme");
+const initialTheme = savedTheme || "light";
+root.classList.toggle("dark", initialTheme === "dark");
 
-// Update icon visibility based on current theme
-function updateThemeIcon() {
-    const isDark = document.documentElement.classList.contains('dark');
-    sunIcon.classList.toggle('hidden', !isDark);
-    moonIcon.classList.toggle('hidden', isDark);
+function syncThemeLabel() {
+    themeLabel.textContent = root.classList.contains("dark") ? "Light" : "Dark";
 }
 
-updateThemeIcon();
+syncThemeLabel();
 
-// Theme toggle functionality
-themeToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
-    const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-    localStorage.setItem('theme', theme);
-    updateThemeIcon();
+themeToggle.addEventListener("click", () => {
+    root.classList.toggle("dark");
+    const nextTheme = root.classList.contains("dark") ? "dark" : "light";
+    localStorage.setItem("theme", nextTheme);
+    syncThemeLabel();
 });
 
-// Mobile Menu Toggle
-const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+mobileMenuBtn.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("open");
+    mobileMenuBtn.setAttribute("aria-expanded", String(isOpen));
 });
 
-// Close mobile menu when clicking on a link
-const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-mobileMenuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-    });
-});
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (event) => {
+        const href = anchor.getAttribute("href");
+        const target = href ? document.querySelector(href) : null;
 
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const offsetTop = target.offsetTop - 80; // Account for fixed navbar
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
+        if (!target) {
+            return;
         }
+
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        mobileMenu.classList.remove("open");
+        mobileMenuBtn.setAttribute("aria-expanded", "false");
     });
 });
 
-// Contact Form Handling (Frontend Only)
-const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    // Create mailto link (since we're using GitHub Pages, no backend)
-    const subject = encodeURIComponent(`Portfolio Contact: ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-    const mailtoLink = `mailto:ahmednasser9060@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
-    
-    // Show success message
-    const button = contactForm.querySelector('button[type="submit"]');
-    const originalText = button.textContent;
-    button.textContent = 'Opening Email Client...';
-    button.disabled = true;
-    
-    setTimeout(() => {
-        button.textContent = originalText;
-        button.disabled = false;
-        contactForm.reset();
-    }, 2000);
-});
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+        const subject = encodeURIComponent(`Portfolio Contact: ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+        window.location.href = `mailto:ahmednasser9060@gmail.com?subject=${subject}&body=${body}`;
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalLabel = submitButton.textContent;
+        submitButton.textContent = "Opening Email...";
+        submitButton.disabled = true;
+
+        setTimeout(() => {
+            submitButton.textContent = originalLabel;
+            submitButton.disabled = false;
+            contactForm.reset();
+        }, 1800);
+    });
+}
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0) scale(1) translateX(0)';
-            observer.unobserve(entry.target);
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.14 });
 
-// Observe all sections and cards
-document.addEventListener('DOMContentLoaded', () => {
-    // Observe project cards with fade-in animation
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.15}s`;
-        // Add animate-in class when card comes into view
-        const cardObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                    cardObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        cardObserver.observe(card);
-    });
-    
-    // Observe experience cards
-    const experienceCards = document.querySelectorAll('.experience-card');
-    experienceCards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.15}s`;
-        observer.observe(card);
-    });
-    
-    // Observe skill categories
-    const skillCategories = document.querySelectorAll('.skill-category');
-    skillCategories.forEach((category, index) => {
-        category.style.animationDelay = `${index * 0.05}s`;
-        observer.observe(category);
-    });
-    
-    // Observe section headings
-    const sectionHeadings = document.querySelectorAll('section h2');
-    sectionHeadings.forEach(heading => {
-        observer.observe(heading);
-    });
+document.querySelectorAll(".reveal").forEach((element) => {
+    revealObserver.observe(element);
 });
 
-// Navbar background on scroll
-let lastScroll = 0;
-const navbar = document.querySelector('nav');
+function setupCarousel(carousel) {
+    const track = carousel.querySelector(".carousel-track");
+    const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+    const prevButton = carousel.querySelector("[data-carousel-prev]");
+    const nextButton = carousel.querySelector("[data-carousel-next]");
+    const dotsContainer = carousel.querySelector("[data-carousel-dots]");
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        navbar.classList.add('shadow-md');
-    } else {
-        navbar.classList.remove('shadow-md');
+    if (!track || slides.length === 0) {
+        return;
     }
-    
-    lastScroll = currentScroll;
-});
 
-// Add active state to navigation links based on scroll position
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
+    let currentIndex = 0;
+    let autoTimer;
+    const interval = Number(carousel.dataset.interval) || 3500;
+    const dots = slides.map((_, index) => {
+        const dot = document.createElement("span");
+        dot.className = "carousel-dot";
+        dot.addEventListener("click", () => {
+            goToSlide(index);
+            restartAutoPlay();
+        });
+        dotsContainer?.appendChild(dot);
+        return dot;
+    });
 
-window.addEventListener('scroll', () => {
-    let current = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
+    function goToSlide(index) {
+        currentIndex = (index + slides.length) % slides.length;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        slides.forEach((slide, slideIndex) => {
+            slide.classList.toggle("is-active", slideIndex === currentIndex);
+        });
+
+        dots.forEach((dot, dotIndex) => {
+            dot.classList.toggle("is-active", dotIndex === currentIndex);
+        });
+    }
+
+    function restartAutoPlay() {
+        window.clearInterval(autoTimer);
+        autoTimer = window.setInterval(() => goToSlide(currentIndex + 1), interval);
+    }
+
+    prevButton?.addEventListener("click", () => {
+        goToSlide(currentIndex - 1);
+        restartAutoPlay();
+    });
+
+    nextButton?.addEventListener("click", () => {
+        goToSlide(currentIndex + 1);
+        restartAutoPlay();
+    });
+
+    carousel.addEventListener("mouseenter", () => window.clearInterval(autoTimer));
+    carousel.addEventListener("mouseleave", restartAutoPlay);
+
+    goToSlide(0);
+    restartAutoPlay();
+}
+
+document.querySelectorAll("[data-carousel]").forEach(setupCarousel);
+
+function updateActiveLink() {
+    let currentId = "";
+
+    sections.forEach((section) => {
+        const top = section.offsetTop - 140;
+        const height = section.offsetHeight;
+        if (window.scrollY >= top && window.scrollY < top + height) {
+            currentId = section.id;
         }
     });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('text-blue-600', 'dark:text-blue-400');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('text-blue-600', 'dark:text-blue-400');
-        }
+
+    navLinks.forEach((link) => {
+        const isCurrent = link.getAttribute("href") === `#${currentId}`;
+        link.classList.toggle("is-active", isCurrent);
     });
-});
+}
+
+window.addEventListener("scroll", updateActiveLink);
+window.addEventListener("load", updateActiveLink);

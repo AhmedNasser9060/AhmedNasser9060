@@ -1,506 +1,478 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Ahmed Nasser Eldin - AI Engineer & Machine Learning Specialist. Building end-to-end AI solutions from data to production-ready APIs. 3+ years experience in ML, MLOps, and cloud deployment.">
-    <meta name="keywords" content="AI Engineer, Machine Learning, MLOps, Python, PyTorch, TensorFlow, Azure, AWS, Data Science">
+    <meta name="description" content="Ahmed Nasser Eldin is an AI Engineer building production-ready machine learning systems, computer vision products, and applied AI solutions.">
+    <meta name="keywords" content="Ahmed Nasser Eldin, AI Engineer, Machine Learning, Computer Vision, FastAPI, MLOps, Portfolio">
     <meta name="author" content="Ahmed Nasser Eldin">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Ahmed Nasser Eldin - AI Engineer | Machine Learning & MLOps Specialist">
-    <meta property="og:description" content="AI Engineer with 3+ years of experience building production-ready AI solutions. Specialized in ML, MLOps, and cloud deployment on Azure and AWS.">
+    <meta property="og:title" content="Ahmed Nasser Eldin | AI Engineer Portfolio">
+    <meta property="og:description" content="Production-focused AI engineer building practical machine learning and computer vision products.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ahmednasser9060.github.io">
-    
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ahmed Nasser Eldin - AI Engineer">
-    <meta name="twitter:description" content="Building end-to-end AI solutions from data to production-ready APIs">
-    
-    <title>Ahmed Nasser Eldin | AI Engineer & Machine Learning Specialist</title>
-    
-    <!-- Tailwind CSS CDN -->
+    <meta name="twitter:title" content="Ahmed Nasser Eldin | AI Engineer Portfolio">
+    <meta name="twitter:description" content="AI engineer focused on production-ready ML systems, APIs, and computer vision products.">
+    <title>Ahmed Nasser Eldin | AI Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Custom Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230f172a'/%3E%3Ctext x='50' y='61' font-size='46' text-anchor='middle' fill='%23f8fafc' font-family='Arial'%3EAN%3C/text%3E%3C/svg%3E">
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
-    
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <a href="#home" class="text-xl font-bold text-gray-900 dark:text-white">AN</a>
-                </div>
-                <div class="hidden md:flex space-x-8">
+<body>
+    <div class="site-shell">
+        <nav class="site-nav">
+            <div class="container nav-inner">
+                <a href="#home" class="brand-mark">Ahmed Nasser</a>
+                <div class="nav-links desktop-nav">
                     <a href="#about" class="nav-link">About</a>
                     <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#projects" class="nav-link">Projects</a>
                     <a href="#experience" class="nav-link">Experience</a>
-                    <a href="#education" class="nav-link">Education</a>
+                    <a href="#projects" class="nav-link">Projects</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </div>
-                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                    <svg id="sun-icon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                    </svg>
-                    <svg id="moon-icon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-                    </svg>
-                </button>
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+                <div class="nav-actions">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <span id="theme-label">Dark</span>
+                    </button>
+                    <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
-        </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-800">
-            <div class="px-4 py-4 space-y-2">
-                <a href="#about" class="block py-2 nav-link">About</a>
-                <a href="#skills" class="block py-2 nav-link">Skills</a>
-                <a href="#projects" class="block py-2 nav-link">Projects</a>
-                <a href="#experience" class="block py-2 nav-link">Experience</a>
-                <a href="#education" class="block py-2 nav-link">Education</a>
-                <a href="#contact" class="block py-2 nav-link">Contact</a>
+            <div id="mobile-menu" class="mobile-menu">
+                <div class="container mobile-menu-links">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <!-- Animated background gradient -->
-        <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-indigo-900/20 dark:to-purple-900/20 -z-10"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.05),transparent_50%)] -z-10"></div>
-        
-        <div class="max-w-5xl mx-auto text-center">
-            <div class="mb-8 animate-fade-in-up">
-                <div class="inline-block relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
-                    <img 
-                        src="https://github.com/AhmedNasser9060/AhmedNasser9060/blob/main/WhatsApp%20Image%202023-04-25%20at%2001.10.09.jpg?raw=true" 
-                        alt="Ahmed Nasser Eldin" 
-                        class="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-2xl mx-auto animate-scale-in"
-                        loading="eager"
-                    >
-                </div>
-            </div>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-fade-in-up animation-delay-200">
-                Ahmed Nasser Eldin
-            </h1>
-            <p class="text-xl sm:text-2xl text-gray-700 dark:text-gray-200 mb-6 font-medium animate-fade-in-up animation-delay-300">
-                AI Engineer | Machine Learning & MLOps Specialist
-            </p>
-            <p class="text-sm text-indigo-600 dark:text-indigo-400 mb-2 font-medium animate-fade-in-up animation-delay-400">📍 Cairo, Egypt</p>
-            <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in-up animation-delay-500">
-                I help businesses and teams build end-to-end AI solutions — from raw data to deployment-ready models — delivering measurable results in 4–8 weeks.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-600">
-                <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-                    View Projects
-                </a>
-                <a href="#contact" class="px-8 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg border border-gray-200 dark:border-gray-700 transform hover:scale-105">
-                    Contact Me
-                </a>
-            </div>
-        </div>
-    </section>
+        <main>
+            <section id="home" class="hero-section">
+                <div class="container hero-grid">
+                    <div class="hero-copy reveal">
+                        <p class="eyebrow">AI ENGINEER | ML | COMPUTER VISION</p>
+                        <h1>Building AI products that look sharp, ship fast, and solve real problems.</h1>
+                        <p class="hero-text">
+                            Ahmed Nasser Eldin is focused on practical machine learning systems, from model development
+                            to deployable APIs and user-facing AI experiences.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#projects" class="primary-btn">See Projects</a>
+                            <a href="#contact" class="secondary-btn">Contact</a>
+                        </div>
+                        <div class="hero-metrics">
+                            <div class="metric-card">
+                                <span class="metric-value">10+</span>
+                                <span class="metric-label">Applied AI projects</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-value">CV + NLP</span>
+                                <span class="metric-label">Core implementation areas</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-value">FastAPI</span>
+                                <span class="metric-label">Deployment-ready backend stack</span>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/50">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center">About</h2>
-            <div class="prose prose-lg dark:prose-invert max-w-none">
-                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                    AI Engineer with 3+ years of hands-on experience in data analysis, machine learning, and AI deployment.
-                    Specialized in building end-to-end AI pipelines on Azure and AWS — from data preprocessing and model
-                    training to scalable REST APIs and production monitoring.
-                </p>
-                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                    Proficient in Python, PyTorch, TensorFlow, and modern AI stacks including LLMs, embeddings,
-                    and vector databases. Delivered 10+ real-world AI projects deployed using Azure Machine Learning,
-                    Azure App Service, AWS SageMaker, Docker, and FastAPI.
-                </p>
-                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Strong background in MLOps, CI/CD, and model optimization, achieving 30–50% lower inference latency
-                    and 20–40% cloud cost optimization. Experienced in cross-functional collaboration, translating
-                    business problems into production-ready AI systems with real impact.
-                </p>
-            </div>
-        </div>
-    </section>
+                    <div class="hero-panel reveal">
+                        <div class="profile-card">
+                            <img
+                                src="https://github.com/AhmedNasser9060/AhmedNasser9060/blob/main/WhatsApp%20Image%202023-04-25%20at%2001.10.09.jpg?raw=true"
+                                alt="Ahmed Nasser Eldin"
+                                class="profile-image"
+                                loading="eager"
+                            >
+                            <div class="profile-meta">
+                                <p class="profile-role">Ahmed Nasser Eldin</p>
+                                <p class="profile-subtitle">AI Engineer based in Cairo, Egypt</p>
+                            </div>
+                            <div class="status-row">
+                                <span class="status-dot"></span>
+                                <span>Open to AI engineering roles and freelance projects</span>
+                            </div>
+                        </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Programming & Data -->
-                <div class="skill-category">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">Programming & Data</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">Pandas</span>
-                        <span class="skill-badge">NumPy</span>
+                        <div class="featured-strip">
+                            <p class="featured-label">Featured Project</p>
+                            <h2>Eye Speak</h2>
+                            <p>
+                                Assistive AI project centered on eye-driven interaction, built to turn vision-based input
+                                into a more accessible communication experience.
+                            </p>
+                            <a href="https://github.com/AhmedNasser9060/Eye-Speak" target="_blank" rel="noopener noreferrer" class="inline-link">
+                                View repository
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Machine Learning & AI -->
-                <div class="skill-category">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">Machine Learning & AI</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge">Machine Learning</span>
-                        <span class="skill-badge">Deep Learning</span>
-                        <span class="skill-badge">NLP</span>
-                        <span class="skill-badge">Computer Vision</span>
-                        <span class="skill-badge">LLMs</span>
-                        <span class="skill-badge">RAG</span>
-                    </div>
-                </div>
-                
-                <!-- Frameworks & Tools -->
-                <div class="skill-category">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">Frameworks & Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge">PyTorch</span>
-                        <span class="skill-badge">TensorFlow</span>
-                        <span class="skill-badge">OpenCV</span>
-                        <span class="skill-badge">FastAPI</span>
-                    </div>
-                </div>
-                
-                <!-- Cloud & Deployment -->
-                <div class="skill-category">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">Cloud & Deployment</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge">Azure ML</span>
-                        <span class="skill-badge">Azure App Service</span>
-                        <span class="skill-badge">AWS SageMaker</span>
-                        <span class="skill-badge">Docker</span>
-                    </div>
-                </div>
-                
-                <!-- MLOps -->
-                <div class="skill-category">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">MLOps</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge">CI/CD</span>
-                        <span class="skill-badge">Model Monitoring</span>
-                        <span class="skill-badge">Optimization</span>
-                    </div>
-                </div>
-                
-                <!-- Data & Visualization -->
-                <div class="skill-category">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">Data & Visualization</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge">Power BI</span>
-                        <span class="skill-badge">Streamlit</span>
-                    </div>
-                </div>
-                
-                <!-- Other -->
-                <div class="skill-category">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">Other</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge">Git</span>
-                        <span class="skill-badge">APIs & Automation</span>
-                        <span class="skill-badge">Statistical Analysis</span>
-                        <span class="skill-badge">Time Management</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/50">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-                
-                <!-- OCR Enhancement Pipeline -->
-                <div class="project-card">
-                    <div class="flex items-start justify-between mb-4">
-                        <h3 class="project-title">OCR Enhancement Pipeline</h3>
-                        <span class="project-date">Feb 2026</span>
+            <section id="about" class="content-section">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="section-kicker">About</p>
+                        <h2>Strong applied AI foundation with product thinking.</h2>
                     </div>
-                    <p class="project-description">
-                        Image preprocessing pipeline for OCR accuracy improvement using advanced techniques including denoising, binarization, deskewing, and contrast enhancement.
-                    </p>
-                    <div class="mb-4">
-                        <p class="section-label">Impact:</p>
-                        <p class="impact-text">60% accuracy increase in OCR results</p>
-                    </div>
-                    <div class="mb-4">
-                        <p class="section-label">Tech Stack:</p>
-                        <div class="tech-tags-container">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">NumPy</span>
-                            <span class="tech-tag">Tesseract OCR</span>
-                        </div>
-                    </div>
-                    <a href="https://github.com/AhmedNasser9060/Enhancement-and-preprocessing-images-for-OCR" target="_blank" rel="noopener noreferrer" class="github-button">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        View on GitHub
-                    </a>
-                </div>
-                
-                <!-- Diabetes Detection App -->
-                <div class="project-card">
-                    <div class="flex items-start justify-between mb-4">
-                        <h3 class="project-title">Diabetes Detection Mobile App</h3>
-                        <span class="project-date">Jan 2026</span>
-                    </div>
-                    <p class="project-description">
-                        Android application using machine learning for diabetes detection. Features FastAPI backend serving ML model with Azure deployment and Ngrok integration for seamless mobile connectivity.
-                    </p>
-                    <div class="mb-4">
-                        <p class="section-label">Deployment:</p>
-                        <p class="impact-text">Deployed on Microsoft Azure for scalable and real-time predictions</p>
-                    </div>
-                    <div class="mb-4">
-                        <p class="section-label">Tech Stack:</p>
-                        <div class="tech-tags-container">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">Azure</span>
-                            <span class="tech-tag">ML</span>
-                            <span class="tech-tag">Android</span>
-                        </div>
-                    </div>
-                    <a href="https://github.com/AhmedNasser9060/Diabetes-Prediction" target="_blank" rel="noopener noreferrer" class="github-button">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        View on GitHub
-                    </a>
-                </div>
-                
-                <!-- RAG & LLM Systems -->
-                <div class="project-card">
-                    <div class="flex items-start justify-between mb-4">
-                        <h3 class="project-title">RAG & LLM-Based Intelligent Systems</h3>
-                        <span class="project-date">Dec 2025</span>
-                    </div>
-                    <p class="project-description">
-                        Retrieval-Augmented Generation pipelines with vector database integration (Supabase) and OpenAI & Gemini integration. Significantly reduced hallucinations in AI responses through improved context retrieval.
-                    </p>
-                    <div class="mb-4">
-                        <p class="section-label">Impact:</p>
-                        <p class="impact-text">Reduced hallucinations in AI responses through improved context retrieval</p>
-                    </div>
-                    <div class="mb-4">
-                        <p class="section-label">Tech Stack:</p>
-                        <div class="tech-tags-container">
-                            <span class="tech-tag">RAG</span>
-                            <span class="tech-tag">LLMs</span>
-                            <span class="tech-tag">Vector DB</span>
-                            <span class="tech-tag">Supabase</span>
-                            <span class="tech-tag">OpenAI</span>
-                            <span class="tech-tag">Gemini</span>
-                        </div>
+                    <div class="about-panel reveal">
+                        <p>
+                            I work on end-to-end AI solutions covering data preparation, model building, API development,
+                            and deployment. My focus is on creating systems that are practical, measurable, and easy to use.
+                        </p>
+                        <p>
+                            I have experience across machine learning, computer vision, NLP, and cloud-ready backend
+                            development using Python, FastAPI, OpenCV, PyTorch, TensorFlow, and modern deployment workflows.
+                        </p>
                     </div>
                 </div>
-                
-                <!-- Face Recognition -->
-                <div class="project-card">
-                    <div class="flex items-start justify-between mb-4">
-                        <h3 class="project-title">Face Recognition Attendance & Automation</h3>
-                        <span class="project-date">Oct 2025</span>
-                    </div>
-                    <p class="project-description">
-                        Face recognition system using OpenCV for automated attendance tracking. Integrated with UIPath for workflow automation, streamlining attendance management processes.
-                    </p>
-                    <div class="mb-4">
-                        <p class="section-label">Tech Stack:</p>
-                        <div class="tech-tags-container">
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">UIPath</span>
-                            <span class="tech-tag">Automation</span>
-                        </div>
-                    </div>
-                    <a href="https://github.com/AhmedNasser9060/Face-Recognition-Attendance-and-Automation-Suite" target="_blank" rel="noopener noreferrer" class="github-button">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        View on GitHub
-                    </a>
-                </div>
-                
-                <!-- Twitter Sentiment -->
-                <div class="project-card">
-                    <div class="flex items-start justify-between mb-4">
-                        <h3 class="project-title">Twitter Sentiment Classification</h3>
-                        <span class="project-date">Jan 2025</span>
-                    </div>
-                    <p class="project-description">
-                        NLP-based sentiment analysis system processing 74K+ tweets using Logistic Regression. Comprehensive preprocessing pipeline with production deployment.
-                    </p>
-                    <div class="mb-4">
-                        <p class="section-label">Impact:</p>
-                        <p class="impact-text">89% accuracy on sentiment classification</p>
-                    </div>
-                    <div class="mb-4">
-                        <p class="section-label">Tech Stack:</p>
-                        <div class="tech-tags-container">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">Logistic Regression</span>
-                            <span class="tech-tag">Data Preprocessing</span>
-                        </div>
-                    </div>
-                    <a href="https://github.com/AhmedNasser9060/Sentimental-analysis-Logistic-regression-" target="_blank" rel="noopener noreferrer" class="github-button">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">Experience</h2>
-            <div class="space-y-8">
-                <!-- DEPI -->
-                <div class="experience-card">
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                        <h3 class="text-xl font-semibold">Data Science Trainee</h3>
-                        <span class="text-sm text-gray-600 dark:text-gray-400">Oct 2024 – May 2025</span>
+            <section id="skills" class="content-section alt-section">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="section-kicker">Skills</p>
+                        <h2>Tools and areas I use to ship production-focused AI work.</h2>
                     </div>
-                    <p class="text-indigo-600 dark:text-indigo-400 font-semibold mb-4 text-lg">Digital Egypt Pioneers Initiative (DEPI)</p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-                        <li>Data collection, cleaning, and preprocessing (structured & unstructured)</li>
-                        <li>Applied machine learning models</li>
-                        <li>Built dashboards using Power BI and Streamlit</li>
-                        <li>Team collaboration on real projects</li>
-                    </ul>
-                </div>
-                
-                <!-- Resala -->
-                <div class="experience-card">
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                        <h3 class="text-xl font-semibold">AI Instructor</h3>
-                        <span class="text-sm text-gray-600 dark:text-gray-400">Jan 2025 – Mar 2025</span>
+                    <div class="skills-grid">
+                        <article class="info-card reveal">
+                            <h3>AI & LLM Systems</h3>
+                            <p>Building modern AI workflows around retrieval, agents, embeddings, and reliable evaluation.</p>
+                            <div class="badge-row">
+                                <span class="skill-badge">LLMs</span>
+                                <span class="skill-badge">RAG</span>
+                                <span class="skill-badge">Agentic Workflows</span>
+                                <span class="skill-badge">Embeddings</span>
+                                <span class="skill-badge">Vector Databases</span>
+                                <span class="skill-badge">LLM Evaluation</span>
+                            </div>
+                        </article>
+                        <article class="info-card reveal">
+                            <h3>Frameworks & Tools</h3>
+                            <p>Core implementation stack for AI products, APIs, computer vision, and model development.</p>
+                            <div class="badge-row">
+                                <span class="skill-badge">Python</span>
+                                <span class="skill-badge">FastAPI</span>
+                                <span class="skill-badge">PyTorch</span>
+                                <span class="skill-badge">TensorFlow</span>
+                                <span class="skill-badge">OpenCV</span>
+                            </div>
+                        </article>
+                        <article class="info-card reveal">
+                            <h3>Cloud & Deployment</h3>
+                            <p>Deploying AI services and mobile-connected products with cloud infrastructure and containers.</p>
+                            <div class="badge-row">
+                                <span class="skill-badge">Azure ML</span>
+                                <span class="skill-badge">Azure App Service</span>
+                                <span class="skill-badge">AWS SageMaker</span>
+                                <span class="skill-badge">AWS</span>
+                                <span class="skill-badge">Docker</span>
+                                <span class="skill-badge">Mobile Application</span>
+                            </div>
+                        </article>
+                        <article class="info-card reveal">
+                            <h3>MLOps & AIOps</h3>
+                            <p>Keeping AI systems easier to ship, monitor, optimize, and expose through clean APIs.</p>
+                            <div class="badge-row">
+                                <span class="skill-badge">CI/CD</span>
+                                <span class="skill-badge">Model Monitoring</span>
+                                <span class="skill-badge">Model Optimization</span>
+                                <span class="skill-badge">REST APIs</span>
+                            </div>
+                        </article>
+                        <article class="info-card reveal">
+                            <h3>Databases & Integration</h3>
+                            <p>Connecting AI systems to databases, production APIs, and external model providers.</p>
+                            <div class="badge-row">
+                                <span class="skill-badge">SQLAlchemy</span>
+                                <span class="skill-badge">Supabase</span>
+                                <span class="skill-badge">OpenAI API</span>
+                                <span class="skill-badge">Google/Gemini API</span>
+                                <span class="skill-badge">API Integration</span>
+                            </div>
+                        </article>
                     </div>
-                    <p class="text-indigo-600 dark:text-indigo-400 font-semibold mb-4 text-lg">Resala Training Centers</p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-                        <li>Taught Python & Machine Learning</li>
-                        <li>Mentored 12 students through hands-on projects</li>
-                        <li>Balanced teaching with active DEPI participation</li>
-                    </ul>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/50">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">Education</h2>
-            <div class="education-card">
-                <h3 class="text-2xl font-semibold mb-2">Bachelor of Artificial Intelligence</h3>
-                <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-2">Helwan International Technological University (HITU)</p>
-                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                    <span class="text-gray-600 dark:text-gray-400">Sep 2022 – Jul 2026</span>
-                    <span class="text-gray-700 dark:text-gray-300 font-medium">GPA: 3.5</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">Contact</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-6">Get in Touch</h3>
-                    <div class="space-y-4">
-                        <a href="mailto:ahmednasser9060@gmail.com" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                            ahmednasser9060@gmail.com
-                        </a>
-                        <a href="tel:+201005237993" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                            </svg>
-                            +20 100 523 7993
-                        </a>
-                        <a href="https://github.com/AhmedNasser9060" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-                            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            github.com/AhmedNasser9060
-                        </a>
-                        <a href="https://linkedin.com/in/ahmad-nasser-eldin/" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-                            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
-                            </svg>
-                            linkedin.com/in/ahmad-nasser-eldin
-                        </a>
+            <section id="experience" class="content-section">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="section-kicker">Experience</p>
+                        <h2>Training and teaching experience that backs the technical work.</h2>
+                    </div>
+                    <div class="timeline">
+                        <article class="timeline-card reveal">
+                            <div class="timeline-head">
+                                <div>
+                                    <h3>Data Science Trainee</h3>
+                                    <p>Digital Egypt Pioneers Initiative (DEPI)</p>
+                                </div>
+                                <span>Oct 2024 - May 2025</span>
+                            </div>
+                            <p>
+                                Worked on applied machine learning workflows covering preprocessing, dashboards,
+                                model experimentation, evaluation, and collaborative project delivery.
+                            </p>
+                            <div class="badge-row">
+                                <span class="skill-badge">Data Science</span>
+                                <span class="skill-badge">ML Projects</span>
+                                <span class="skill-badge">Dashboards</span>
+                                <span class="skill-badge">Team Delivery</span>
+                            </div>
+                        </article>
+                        <article class="timeline-card reveal">
+                            <div class="timeline-head">
+                                <div>
+                                    <h3>AI Instructor</h3>
+                                    <p>Resala Training Centers</p>
+                                </div>
+                                <span>Jan 2025 - Mar 2025</span>
+                            </div>
+                            <p>
+                                Taught Python and machine learning fundamentals while mentoring students through
+                                practical exercises, project thinking, debugging, and implementation habits.
+                            </p>
+                            <div class="badge-row">
+                                <span class="skill-badge">Python</span>
+                                <span class="skill-badge">Machine Learning</span>
+                                <span class="skill-badge">Mentoring</span>
+                                <span class="skill-badge">Hands-on Projects</span>
+                            </div>
+                        </article>
                     </div>
                 </div>
-                
-                <!-- Contact Form -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-6">Send a Message</h3>
-                    <form id="contact-form" class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all">
+            </section>
+
+            <section id="projects" class="content-section">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="section-kicker">Projects</p>
+                        <h2>Selected work across AI, vision, and deployed products.</h2>
+                    </div>
+
+                    <article class="project-feature reveal">
+                        <div class="project-feature-copy">
+                            <p class="project-tag">Featured Project</p>
+                            <h3>Eye Speak</h3>
+                            <p class="project-summary">
+                                Assistive AI application focused on eye-based interaction and accessible communication,
+                                with a deployed workflow and real tester feedback.
+                            </p>
+                            <div class="project-highlights">
+                                <span class="project-pill">Assistive AI</span>
+                                <span class="project-pill">Computer Vision</span>
+                                <span class="project-pill">Accessibility</span>
+                                <span class="project-pill">Mobile App</span>
+                            </div>
                         </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all">
+                        <div class="project-feature-side">
+                            <div class="project-stat">
+                                <span class="project-stat-label">Repository</span>
+                                <strong>Eye-Speak</strong>
+                            </div>
+                            <div class="project-stat">
+                                <span class="project-stat-label">Focus</span>
+                                <strong>Eye-based communication</strong>
+                            </div>
+                            <a href="https://github.com/AhmedNasser9060/Eye-Speak" target="_blank" rel="noopener noreferrer" class="primary-btn full-width">
+                                Open on GitHub
+                            </a>
                         </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
-                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all resize-none"></textarea>
+                    </article>
+
+                    <div class="eye-speak-gallery reveal">
+                        <div class="gallery-heading">
+                            <p class="project-tag">Project Screens</p>
+                            <h3 class="gallery-title">Eye Speak in action</h3>
+                            <p>
+                                Eight auto-rotating views: each screen appears normally, then as a focused lower-left crop.
+                            </p>
                         </div>
-                        <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-                            Send Message
-                        </button>
+                        <div class="carousel-shell gallery-carousel" data-carousel data-interval="2600">
+                            <div class="carousel-viewport">
+                                <div class="gallery-grid carousel-track">
+                            <figure class="gallery-card gallery-card-normal carousel-slide">
+                                <span>01 / Full screen</span>
+                                <img src="High quaility/1.jpg" alt="Eye Speak screen 1 full view" loading="lazy">
+                            </figure>
+                            <figure class="gallery-card gallery-card-zoom carousel-slide">
+                                <span>01 / Lower-left focus</span>
+                                <img src="High quaility/1.jpg" alt="Eye Speak screen 1 lower-left text zoom" loading="lazy">
+                            </figure>
+                            <figure class="gallery-card gallery-card-normal carousel-slide">
+                                <span>02 / Full screen</span>
+                                <img src="High quaility/2.jpg" alt="Eye Speak screen 2 full view" loading="lazy">
+                            </figure>
+                            <figure class="gallery-card gallery-card-zoom carousel-slide">
+                                <span>02 / Lower-left focus</span>
+                                <img src="High quaility/2.jpg" alt="Eye Speak screen 2 lower-left text zoom" loading="lazy">
+                            </figure>
+                            <figure class="gallery-card gallery-card-normal carousel-slide">
+                                <span>03 / Full screen</span>
+                                <img src="High quaility/3.jpeg" alt="Eye Speak screen 3 full view" loading="lazy">
+                            </figure>
+                            <figure class="gallery-card gallery-card-zoom carousel-slide">
+                                <span>03 / Lower-left focus</span>
+                                <img src="High quaility/3.jpeg" alt="Eye Speak screen 3 lower-left text zoom" loading="lazy">
+                            </figure>
+                            <figure class="gallery-card gallery-card-normal carousel-slide">
+                                <span>04 / Full screen</span>
+                                <img src="High quaility/4.jpg" alt="Eye Speak screen 4 full view" loading="lazy">
+                            </figure>
+                            <figure class="gallery-card gallery-card-zoom carousel-slide">
+                                <span>04 / Lower-left focus</span>
+                                <img src="High quaility/4.jpg" alt="Eye Speak screen 4 lower-left text zoom" loading="lazy">
+                            </figure>
+                                </div>
+                            </div>
+                            <div class="carousel-dots" aria-hidden="true" data-carousel-dots></div>
+                        </div>
+                    </div>
+
+                    <div class="testimonials-panel reveal" dir="rtl" aria-labelledby="eye-speak-testimonials-title">
+                        <div class="testimonials-heading">
+                            <p class="project-tag">Testimonials</p>
+                            <h3 id="eye-speak-testimonials-title">Eye Speak feedback</h3>
+                        </div>
+                        <div class="testimonial-wheel" data-carousel data-interval="4200">
+                            <div class="carousel-viewport">
+                                <div class="testimonials-grid carousel-track">
+                            <article class="testimonial-card featured-testimonial carousel-slide">
+                                <p>
+                                    Ø§Ø­Ù†Ø§ Ø¬Ø±Ø¨Ù†Ø§ Ø§Ù„Ø§Ø¨ÙƒÙ„ÙŠØ´Ù† ÙˆÙ‡Ùˆ ØªØ­ÙÙ‡ Ø¨ØµØ±Ø§Ø­Ù‡ ÙˆØ³Ø±ÙŠØ¹ ÙˆØ¯Ù‡ Ø¨ÙØ¶Ù„ Ø±Ø¨Ù†Ø§ ÙˆØ¨Ø¹Ø¯ÙŠÙ† Ø¨ÙØ¶Ù„ ØªØ¹Ø¨Ùƒ Ù…Ø¹Ø§Ù†Ø§ Ø·ÙˆÙ„ Ø§Ù„ØªØ±Ù… ÙˆØ§Ù„ØªØ¹Ø¯ÙŠÙ„Ø§Øª ÙˆÙƒÙ†Øª Ø¨ØªØ±Ø¯ Ø¹Ù„ÙŠÙ†Ø§ Ø¨Ø³Ø±Ø¹Ù‡ ÙˆÙ…ØªØ¹Ø§ÙˆÙ† Ù…Ø¹Ø§Ù†Ø§ Ø¬Ø¯Ø§
+                                </p>
+                                <strong>Ø¨Ø¬Ø¯ Ø´ÙƒØ±Ø§ ÙŠØ§ Ø§Ø­Ù…Ø¯ ÙˆØ±Ø¨Ù†Ø§ ÙŠÙˆÙÙ‚Ùƒ ÙÙŠ ÙƒÙ„ Ø­ÙŠØ§ØªÙƒ Ø§Ù„Ø¬Ø§ÙŠÙ‡ ÙŠØ§Ø±Ø¨ ðŸ˜â¤ï¸</strong>
+                            </article>
+                            <article class="testimonial-card carousel-slide">
+                                <p>
+                                    ØªØ³Ù„Ù… Ø§ÙŠØ¯Ùƒ Ø¨Ø¬Ø¯ Ù…Ø§Ø´Ø§Ø¡ Ø§Ù„Ù„Ù‡ Ø´ØºÙ„ Ø­Ø¶Ø±ØªÙƒ Ø­Ù„Ùˆ ÙˆØªØ¹Ø¨Øª Ù…Ø¹Ø§Ù†Ø§ ÙˆØ§Ù„ØªØ¹Ø¯ÙŠÙ„Ø§Øª Ø§Ù„Ù„ÙŠ ÙƒÙ†Ø§ Ø¨Ù†Ù‚ÙˆÙ„Ù‡Ø§ ÙƒÙ†Øª Ø¨ØªØ¹Ù…Ù„Ù‡Ø§ Ø¨Ø§Ù„Ø¶Ø¨Ø· ÙˆØ­Ø¶Ø±ØªÙƒ Ø´Ø®Øµ Ù…Ø­ØªØ±Ù… Ø±Ø¨Ù†Ø§ ÙŠÙˆÙÙ‚Ùƒ ÙŠØ§Ø±Ø¨ ÙˆÙ ØªÙ‚Ø¯Ù…ðŸ¤
+                                </p>
+                            </article>
+                            <article class="testimonial-card carousel-slide">
+                                <p>
+                                    Ø§Ù„Ø§Ø¨Ù„ÙƒÙŠØ´Ù† ØªØ­ÙÙ‡ ÙˆØ§Ù„Ù„Ù‡ Ø¨Ø¬Ø¯ ØªØ³Ù„Ù… Ø§ÙŠØ¯Ùƒ ØªØ¹Ø¨Ù†Ø§Ùƒ Ù…Ø¹Ø§Ù†Ø§ Ù Ø§Ù„ØªØ¹Ø¯ÙŠÙ„Ø§Øª ÙˆØ­Ø¶Ø±ØªÙƒ ÙƒÙ†Øª Ù…ØªØ¹Ø§ÙˆÙ† Ù…Ø¹Ø§Ù†Ø§ Ø£ÙˆÙŠ ÙˆØ­Ø¶Ø±ØªÙƒ Ø´Ø®ØµÙŠØ© Ù…Ø­ØªØ±Ù…Ø© ÙˆÙƒÙ„Ùƒ Ø²ÙˆÙ‚ Ø±Ø¨Ù†Ø§ ÙŠÙƒØ±Ù…Ùƒ ÙŠØ§Ø±Ø¨
+                                </p>
+                            </article>
+                            <article class="testimonial-card carousel-slide">
+                                <p>
+                                    Ø§Ù„Ø§Ø¨Ù„ÙƒÙŠØ´Ù† ØªØ­ÙÙ‡ Ø¨Ø¬Ø¯ Ùˆ Ø­Ø¶Ø±ØªÙƒ ÙƒÙ†Øª Ù…ØªØ¹Ø§ÙˆÙ† Ù…Ø¹Ø§Ù†Ø§ Ø¬Ø¯Ø§ ÙˆÙÙŠ Ø³Ø±Ø¹Ù‡ ÙÙŠ Ø§Ù„ØªØ¹Ø¯ÙŠÙ„Ø§Øª Ø±Ø¨Ù†Ø§ ÙŠØ¨Ø§Ø±ÙƒÙ„Ùƒ Ø¨Ø¬Ø¯ ØªØ³Ù„Ù… Ø£ÙŠØ¯Ùƒ â˜ºï¸
+                                </p>
+                            </article>
+                            <article class="testimonial-card carousel-slide">
+                                <p>
+                                    Ø¬Ø²Ø§Ùƒ Ø§Ù„Ù„Ù‡ Ø®ÙŠØ± Ù…Ø´Ù…Ù‡Ù†Ø¯Ø³ Ø§Ø­Ù…Ø¯ Ø¹ Ø§Ù„Ø§Ø¨Ù„ÙƒØ´ÙŠÙ† Ø§Ù„Ø¬Ù…ÙŠÙ„ Ø¯Ù‡ Ø±Ø¨Ù†Ø§ ÙŠÙƒØ±Ù…Ùƒ Ø¹ Ø°ÙˆÙ‚Ùƒ ÙˆØ³Ø±Ø¹Ù‡ Ø§Ø³ØªØ¬Ø§Ø¨ØªÙƒ Ù„ØªØ¹Ø§Ø¯ÙŠÙ„Ø§ØªÙ†Ø§ Ø±Ø¨Ù†Ø§ ÙŠØ­ÙØ¸Ùƒ ÙˆÙŠØ¬Ø¹Ù„Ù‡ Ù Ù…ÙŠØ²Ø§Ù† Ø­Ø³Ø§Ù†ØªÙƒ ÙˆØ²Ø§Ø¯Ùƒ Ù…Ù† Ø¹Ù„Ù…Ù‡ ÙŠØ§Ø±Ø¨
+                                </p>
+                            </article>
+                                </div>
+                            </div>
+                            <div class="carousel-dots" aria-hidden="true" data-carousel-dots></div>
+                        </div>
+                    </div>
+
+                    <div class="projects-grid">
+                        <article class="project-card reveal">
+                            <img src="assets/projects/ocr-enhancement.png" alt="OCR enhancement pipeline visual" class="project-image" loading="lazy">
+                            <div class="project-card-head">
+                                <h3>OCR Enhancement Pipeline</h3>
+                                <span>2026</span>
+                            </div>
+                            <p>Image preprocessing workflow that improves OCR quality using denoising, deskewing, and contrast enhancement.</p>
+                            <div class="badge-row">
+                                <span class="skill-badge">OpenCV</span>
+                                <span class="skill-badge">NumPy</span>
+                                <span class="skill-badge">Tesseract</span>
+                            </div>
+                            <a href="https://github.com/AhmedNasser9060/Enhancement-and-preprocessing-images-for-OCR" target="_blank" rel="noopener noreferrer" class="inline-link">
+                                View repository
+                            </a>
+                        </article>
+
+                        <article class="project-card reveal">
+                            <img src="assets/projects/diabetes-detection.png" alt="Diabetes detection mobile AI app visual" class="project-image" loading="lazy">
+                            <div class="project-card-head">
+                                <h3>Diabetes Detection App</h3>
+                                <span>2026</span>
+                            </div>
+                            <p>Mobile-integrated ML workflow with FastAPI backend and cloud deployment for real-time prediction delivery.</p>
+                            <div class="badge-row">
+                                <span class="skill-badge">FastAPI</span>
+                                <span class="skill-badge">Azure</span>
+                                <span class="skill-badge">Android</span>
+                            </div>
+                            <a href="https://github.com/AhmedNasser9060/Diabetes-Prediction" target="_blank" rel="noopener noreferrer" class="inline-link">
+                                View repository
+                            </a>
+                        </article>
+
+                        <article class="project-card reveal">
+                            <img src="assets/projects/face-recognition-attendance.png" alt="Face recognition attendance automation visual" class="project-image" loading="lazy">
+                            <div class="project-card-head">
+                                <h3>Face Recognition Attendance</h3>
+                                <span>2025</span>
+                            </div>
+                            <p>Attendance automation using computer vision and workflow integration to reduce manual tracking effort.</p>
+                            <div class="badge-row">
+                                <span class="skill-badge">OpenCV</span>
+                                <span class="skill-badge">Python</span>
+                                <span class="skill-badge">Automation</span>
+                            </div>
+                            <a href="https://github.com/AhmedNasser9060/Face-Recognition-Attendance-and-Automation-Suite" target="_blank" rel="noopener noreferrer" class="inline-link">
+                                View repository
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="content-section contact-section">
+                <div class="container contact-grid">
+                    <div class="section-heading reveal">
+                        <p class="section-kicker">Contact</p>
+                        <h2>Let's build something useful.</h2>
+                        <p class="contact-copy">
+                            Available for AI engineering roles, freelance work, and practical machine learning projects.
+                        </p>
+                        <div class="contact-list">
+                            <a href="mailto:ahmednasser9060@gmail.com">ahmednasser9060@gmail.com</a>
+                            <a href="tel:+201005237993">+20 100 523 7993</a>
+                            <a href="https://github.com/AhmedNasser9060" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                            <a href="https://linkedin.com/in/ahmad-nasser-eldin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <form id="contact-form" class="contact-form reveal">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button type="submit" class="primary-btn full-width">Send Message</button>
                     </form>
                 </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p>&copy; 2026 Ahmed Nasser Eldin</p>
+                <a href="https://github.com/AhmedNasser9060/Eye-Speak" target="_blank" rel="noopener noreferrer">Featured repo: Eye Speak</a>
             </div>
-        </div>
-    </section>
+        </footer>
+    </div>
 
-    <!-- Footer -->
-    <footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-        <div class="max-w-7xl mx-auto text-center text-gray-600 dark:text-gray-400">
-            <p>&copy; 2026 Ahmed Nasser Eldin. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

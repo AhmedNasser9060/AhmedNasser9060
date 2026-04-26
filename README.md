@@ -1,169 +1,153 @@
-# 🤖 Ahmed Nasser Eldin — AI Engineer & Machine Learning Specialist
+# Ahmed Nasser Eldin - Portfolio Website
 
-📍 Cairo, Egypt  
-🎓 Bachelor of Artificial Intelligence — Helwan International Technological University (HITU)  
-📧 ahmednasser9060@gmail.com  
-📞 +20 100 523 7993  
-🔗 [Portfolio Website](https://ahmednasser9060.github.io/AhmedNasser9060/)  
-🔗 [LinkedIn](https://linkedin.com/in/ahmad-nasser-eldin/)  
-🔗 [GitHub](https://github.com/AhmedNasser9060)
+A modern, professional portfolio website showcasing AI Engineering expertise, built with static web technologies and optimized for GitHub Pages deployment.
 
----
+## 🚀 Features
 
-## 👋 About Me
+- **Fully Responsive**: Works seamlessly on desktop, tablet, and mobile devices
+- **Dark/Light Mode**: Toggle between themes with persistent preference
+- **Modern Design**: Clean, minimalist UI inspired by top tech company portfolios
+- **SEO Optimized**: Complete meta tags and Open Graph tags for social sharing
+- **Fast Loading**: Static site with minimal dependencies
+- **Accessible**: Semantic HTML and proper focus states
+- **Smooth Animations**: Subtle, professional animations throughout
 
-I’m an **AI Engineer with 3+ years of hands-on experience** building **end-to-end AI solutions** — from raw data and model training to **deployment-ready models and cloud deployment**.
+## 🛠️ Tech Stack
 
-I specialize in:
-- Machine Learning & Deep Learning  
-- MLOps & scalable deployments  
-- Cloud-based AI systems on **Azure & AWS**
+- **HTML5**: Semantic markup
+- **CSS3**: Custom styles with Tailwind CSS (CDN)
+- **JavaScript**: Vanilla JS for interactivity
+- **Fonts**: Inter (Google Fonts)
 
-I help businesses and teams **turn data into real-world AI products** that deliver measurable results in **4–8 weeks**.
+## 📁 Project Structure
 
----
+```
+.
+├── index.html          # Main HTML file
+├── styles.css          # Custom CSS styles
+├── script.js           # JavaScript functionality
+└── README.md          # This file
+```
 
-## 🧠 Core Skills
+## 🚀 Deployment to GitHub Pages
 
-### 🧑‍💻 Programming & Data
-- Python, Pandas, NumPy
+### Method 1: Using GitHub Web Interface
 
-### 🤖 Machine Learning & AI
-- Machine Learning
-- Deep Learning
-- NLP
-- Computer Vision
-- LLMs & RAG Systems
+1. **Create a new repository** on GitHub (e.g., `portfolio` or `ahmednasser-portfolio`)
 
-### 🛠 Frameworks & Tools
-- PyTorch
-- TensorFlow
-- OpenCV
-- FastAPI
+2. **Upload files** to the repository:
+   - Click "Add file" → "Upload files"
+   - Drag and drop `index.html`, `styles.css`, and `script.js`
+   - Commit the changes
 
-### ☁️ Cloud & Deployment
-- Azure Machine Learning
-- Azure App Service
-- AWS SageMaker
-- Docker
+3. **Enable GitHub Pages**:
+   - Go to repository **Settings** → **Pages**
+   - Under "Source", select **main branch** (or your default branch)
+   - Select **/ (root)** folder
+   - Click **Save**
 
-### 🔁 MLOps
-- CI/CD pipelines
-- Model monitoring
-- Model optimization
+4. **Access your site**:
+   - Your portfolio will be available at: `https://[username].github.io/[repository-name]`
+   - It may take a few minutes to go live
 
-### 📊 Data & Visualization
-- Power BI
-- Streamlit
+### Method 2: Using Git Command Line
 
-### 🔧 Other
-- Git & GitHub
-- APIs & Automation
-- Statistical Analysis
+1. **Initialize Git repository** (if not already):
+   ```bash
+   git init
+   ```
 
----
+2. **Add all files**:
+   ```bash
+   git add .
+   ```
 
-## 🚀 Featured Projects
+3. **Commit files**:
+   ```bash
+   git commit -m "Initial portfolio commit"
+   ```
 
-### 🔍 OCR Enhancement Pipeline (Feb 2026)
-**Image preprocessing pipeline to improve OCR accuracy**
+4. **Add remote repository**:
+   ```bash
+   git remote add origin https://github.com/[username]/[repository-name].git
+   ```
 
-- 📈 **60% increase in OCR accuracy**
-- Techniques: denoising, binarization, deskewing, contrast enhancement  
-- **Tech Stack:** Python, OpenCV, NumPy, Tesseract OCR  
-🔗 [View on GitHub](https://github.com/AhmedNasser9060/Enhancement-and-preprocessing-images-for-OCR)
+5. **Push to GitHub**:
+   ```bash
+   git branch -M main
+   git push -u origin main
+   ```
 
----
+6. **Enable GitHub Pages** (follow steps 3-4 from Method 1)
 
-### 🩺 Diabetes Detection Mobile App (Jan 2026)
-**ML-powered Android app with cloud deployment**
+## 🔧 Customization
 
-- FastAPI backend serving ML model  
-- Deployed on **Microsoft Azure**  
-- Real-time predictions with Ngrok integration  
-- **Tech Stack:** Python, FastAPI, Azure, Android  
-🔗 [View on GitHub](https://github.com/AhmedNasser9060/Diabetes-Prediction)
+### Update Personal Information
 
----
+Edit `index.html` to update:
+- Name, title, location (Hero section)
+- About section content
+- Skills, experience, projects
+- Education details
+- Contact information
 
-### 📚 RAG & LLM-Based Intelligent Systems (Dec 2025)
-**Retrieval-Augmented Generation pipelines**
+### Change Color Scheme
 
-- Integrated vector databases (Supabase)  
-- OpenAI & Gemini LLMs  
-- Reduced hallucinations via improved context retrieval  
-- **Tech Stack:** RAG, LLMs, Vector DBs, Supabase, OpenAI, Gemini
+The site uses Tailwind CSS with a blue/purple gradient theme. To customize:
+- Edit the gradient classes in the Hero section
+- Modify color classes throughout the HTML
+- Update `styles.css` for custom color overrides
 
----
+### Add/Remove Sections
 
-### 🧑‍🤝‍🧑 Face Recognition Attendance & Automation (Oct 2025)
-**Automated attendance system using face recognition**
+All sections are clearly marked in `index.html`. Simply:
+- Add new sections following the existing structure
+- Update navigation links in the `<nav>` element
+- Add corresponding IDs for smooth scrolling
 
-- Built with OpenCV  
-- Integrated with UIPath for workflow automation  
-- **Tech Stack:** Python, OpenCV, UIPath  
-🔗 [View on GitHub](https://github.com/AhmedNasser9060/Face-Recognition-Attendance-and-Automation-Suite)
+## 📱 Browser Support
 
----
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
-### 🐦 Twitter Sentiment Classification (Jan 2025)
-**NLP-based sentiment analysis system**
+## 🔍 SEO Optimization
 
-- Processed **74K+ tweets**  
-- Achieved **89% accuracy**  
-- Logistic Regression with full preprocessing pipeline  
-- **Tech Stack:** Python, NLP, Scikit-learn  
-🔗 [View on GitHub](https://github.com/AhmedNasser9060/Sentimental-analysis-Logistic-regression-)
+The site includes:
+- Meta description and keywords
+- Open Graph tags for social media sharing
+- Semantic HTML structure
+- Proper heading hierarchy
+- Alt text for images (when added)
 
----
+## 📝 Notes
 
-## 💼 Experience
+- **Contact Form**: Currently uses `mailto:` links (frontend only). For backend functionality, consider services like:
+  - Formspree
+  - EmailJS
+  - Netlify Forms
+  - Custom backend API
 
-### 📊 Data Science Trainee  
-**Digital Egypt Pioneers Initiative (DEPI)**  
-*Oct 2024 – May 2025*
+- **Analytics**: To add Google Analytics or similar:
+  - Add tracking script in `<head>` section of `index.html`
 
-- Data collection, cleaning & preprocessing  
-- Applied ML models on real datasets  
-- Built dashboards using Power BI & Streamlit  
-- Team collaboration on production-oriented projects  
+- **Custom Domain**: To use a custom domain:
+  1. Add a `CNAME` file with your domain name
+  2. Configure DNS settings as per GitHub Pages documentation
 
----
+## 📄 License
 
-### 🎓 AI Instructor  
-**Resala Training Centers**  
-*Jan 2025 – Mar 2025*
+This portfolio is personal and proprietary. All rights reserved.
 
-- Taught Python & Machine Learning  
-- Mentored 12 students through hands-on projects  
-- Balanced teaching with active industry training  
+## 👤 Author
 
----
-
-## 🎓 Education
-
-**Bachelor of Artificial Intelligence**  
-Helwan International Technological University (HITU)  
-📅 Sep 2022 – Jul 2026  
-🎯 GPA: 3.5
-
----
-
-## 📬 Contact
-
-If you’re interested in:
-- AI & ML projects  
-- Freelance or part-time work  
-- Collaboration or research  
-
-Feel free to reach out 👇
-
-📧 **Email:** ahmednasser9060@gmail.com  
-🔗 **LinkedIn:** https://linkedin.com/in/ahmad-nasser-eldin/  
-🌐 **Portfolio:** https://ahmednasser9060.github.io  
+**Ahmed Nasser Eldin**
+- Email: ahmednasser9060@gmail.com
+- GitHub: [@AhmedNasser9060](https://github.com/AhmedNasser9060)
+- LinkedIn: [ahmad-nasser-eldin](https://linkedin.com/in/ahmad-nasser-eldin/)
 
 ---
 
-⭐ *If you like my work, don’t forget to star the repositories!*  
-
-
+Built with ❤️ for showcasing AI Engineering expertise.
