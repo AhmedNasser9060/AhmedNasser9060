@@ -1,153 +1,82 @@
-# Ahmed Nasser Eldin - Portfolio Website
+# Ahmed Nasser Eldin
 
-A modern, professional portfolio website showcasing AI Engineering expertise, built with static web technologies and optimized for GitHub Pages deployment.
+AI Engineer and Machine Learning Specialist focused on building practical AI products, from data preprocessing and model training to APIs, cloud deployment, and mobile-ready applications.
 
-## 🚀 Features
+I work across machine learning, computer vision, MLOps, and modern LLM systems. My goal is to turn AI ideas into reliable products that people can actually use.
 
-- **Fully Responsive**: Works seamlessly on desktop, tablet, and mobile devices
-- **Dark/Light Mode**: Toggle between themes with persistent preference
-- **Modern Design**: Clean, minimalist UI inspired by top tech company portfolios
-- **SEO Optimized**: Complete meta tags and Open Graph tags for social sharing
-- **Fast Loading**: Static site with minimal dependencies
-- **Accessible**: Semantic HTML and proper focus states
-- **Smooth Animations**: Subtle, professional animations throughout
+## Quick Links
 
-## 🛠️ Tech Stack
-
-- **HTML5**: Semantic markup
-- **CSS3**: Custom styles with Tailwind CSS (CDN)
-- **JavaScript**: Vanilla JS for interactivity
-- **Fonts**: Inter (Google Fonts)
-
-## 📁 Project Structure
-
-```
-.
-├── index.html          # Main HTML file
-├── styles.css          # Custom CSS styles
-├── script.js           # JavaScript functionality
-└── README.md          # This file
-```
-
-## 🚀 Deployment to GitHub Pages
-
-### Method 1: Using GitHub Web Interface
-
-1. **Create a new repository** on GitHub (e.g., `portfolio` or `ahmednasser-portfolio`)
-
-2. **Upload files** to the repository:
-   - Click "Add file" → "Upload files"
-   - Drag and drop `index.html`, `styles.css`, and `script.js`
-   - Commit the changes
-
-3. **Enable GitHub Pages**:
-   - Go to repository **Settings** → **Pages**
-   - Under "Source", select **main branch** (or your default branch)
-   - Select **/ (root)** folder
-   - Click **Save**
-
-4. **Access your site**:
-   - Your portfolio will be available at: `https://[username].github.io/[repository-name]`
-   - It may take a few minutes to go live
-
-### Method 2: Using Git Command Line
-
-1. **Initialize Git repository** (if not already):
-   ```bash
-   git init
-   ```
-
-2. **Add all files**:
-   ```bash
-   git add .
-   ```
-
-3. **Commit files**:
-   ```bash
-   git commit -m "Initial portfolio commit"
-   ```
-
-4. **Add remote repository**:
-   ```bash
-   git remote add origin https://github.com/[username]/[repository-name].git
-   ```
-
-5. **Push to GitHub**:
-   ```bash
-   git branch -M main
-   git push -u origin main
-   ```
-
-6. **Enable GitHub Pages** (follow steps 3-4 from Method 1)
-
-## 🔧 Customization
-
-### Update Personal Information
-
-Edit `index.html` to update:
-- Name, title, location (Hero section)
-- About section content
-- Skills, experience, projects
-- Education details
-- Contact information
-
-### Change Color Scheme
-
-The site uses Tailwind CSS with a blue/purple gradient theme. To customize:
-- Edit the gradient classes in the Hero section
-- Modify color classes throughout the HTML
-- Update `styles.css` for custom color overrides
-
-### Add/Remove Sections
-
-All sections are clearly marked in `index.html`. Simply:
-- Add new sections following the existing structure
-- Update navigation links in the `<nav>` element
-- Add corresponding IDs for smooth scrolling
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 🔍 SEO Optimization
-
-The site includes:
-- Meta description and keywords
-- Open Graph tags for social media sharing
-- Semantic HTML structure
-- Proper heading hierarchy
-- Alt text for images (when added)
-
-## 📝 Notes
-
-- **Contact Form**: Currently uses `mailto:` links (frontend only). For backend functionality, consider services like:
-  - Formspree
-  - EmailJS
-  - Netlify Forms
-  - Custom backend API
-
-- **Analytics**: To add Google Analytics or similar:
-  - Add tracking script in `<head>` section of `index.html`
-
-- **Custom Domain**: To use a custom domain:
-  1. Add a `CNAME` file with your domain name
-  2. Configure DNS settings as per GitHub Pages documentation
-
-## 📄 License
-
-This portfolio is personal and proprietary. All rights reserved.
-
-## 👤 Author
-
-**Ahmed Nasser Eldin**
+- Portfolio: https://ahmednasser9060.github.io
+- CV: https://drive.google.com/file/d/1BBbmk1vYyOvdeh6VGN8_-WPvaSf4Zt9v/view?usp=sharing
+- GitHub: https://github.com/AhmedNasser9060
+- LinkedIn: https://linkedin.com/in/ahmad-nasser-eldin/
 - Email: ahmednasser9060@gmail.com
-- GitHub: [@AhmedNasser9060](https://github.com/AhmedNasser9060)
-- LinkedIn: [ahmad-nasser-eldin](https://linkedin.com/in/ahmad-nasser-eldin/)
 
----
+## About Me
 
-Built with ❤️ for showcasing AI Engineering expertise.
+- AI Engineer with 3+ years of hands-on experience in machine learning, data analysis, and AI deployment.
+- Built 10+ real-world AI projects using Python, FastAPI, PyTorch, TensorFlow, OpenCV, Azure, AWS, Docker, and Supabase.
+- Experienced in LLM systems, RAG pipelines, embeddings, vector databases, and API integrations with OpenAI and Google/Gemini.
+- Strong focus on production readiness: clean APIs, deployment, monitoring, optimization, and practical user experience.
+- Based in Cairo, Egypt.
+
+## Core Skills
+
+| Area | Tools and Topics |
+| --- | --- |
+| AI and LLM Systems | LLMs, RAG, Agentic Workflows, Embeddings, Vector Databases, LLM Evaluation |
+| Frameworks and Tools | Python, FastAPI, PyTorch, TensorFlow, OpenCV |
+| Cloud and Deployment | Azure ML, Azure App Service, AWS SageMaker, Docker, Mobile Applications |
+| MLOps and AIOps | CI/CD, Model Monitoring, Model Optimization, REST APIs |
+| Databases and Integration | SQLAlchemy, Supabase, OpenAI API, Google/Gemini API, API Integration |
+
+## Featured Projects
+
+### Eye Speak
+An assistive AI mobile application designed to help users interact with text and visual content more easily. The project includes OCR-focused flows, AI features, and mobile-first product thinking.
+
+- Portfolio showcase: https://ahmednasser9060.github.io
+- Repository: https://github.com/AhmedNasser9060/Eye-Speak
+
+### OCR Enhancement Pipeline
+Image preprocessing and enhancement pipeline designed to improve OCR accuracy by cleaning, enhancing, and preparing documents before text extraction.
+
+- Repository: https://github.com/AhmedNasser9060/Enhancement-and-preprocessing-images-for-OCR
+
+### Diabetes Detection Mobile App
+Machine learning mobile application for diabetes prediction, connected to a FastAPI backend and deployed with Azure for scalable predictions.
+
+- Repository: https://github.com/AhmedNasser9060/Diabetes-Prediction
+
+### RAG and LLM-Based Intelligent Systems
+Retrieval-Augmented Generation pipelines with vector database integration, Supabase, OpenAI, and Gemini APIs to improve response quality and reduce hallucinations.
+
+### Face Recognition Attendance and Automation
+Computer vision attendance system using OpenCV, with automation workflows for practical attendance management.
+
+- Repository: https://github.com/AhmedNasser9060/Face-Recognition-Attendance-and-Automation-Suite
+
+## Experience
+
+### Data Science Trainee - Digital Egypt Pioneers Initiative (DEPI)
+Worked on real-world data science and AI projects covering data preprocessing, machine learning, model evaluation, and deployment workflows.
+
+### AI Instructor
+Taught Python and machine learning concepts, helping learners understand core AI workflows and build practical projects.
+
+## What I Build
+
+- End-to-end AI and ML products
+- RAG and LLM-powered systems
+- Computer vision and OCR applications
+- FastAPI backends for AI models
+- Cloud-deployed AI services
+- Mobile-connected AI applications
+
+## Portfolio Repository
+
+This repository hosts my personal portfolio website using GitHub Pages. It presents my experience, projects, skills, and contact links in one clean place.
+
+If you are reviewing my work, the best place to start is the live portfolio:
+
+https://ahmednasser9060.github.io
