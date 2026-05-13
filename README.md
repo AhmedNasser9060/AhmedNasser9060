@@ -6,7 +6,7 @@ I work across machine learning, computer vision, MLOps, and modern LLM systems. 
 
 ## Quick Links
 
-- Portfolio: https://ahmednasser9060.github.io
+- Portfolio: https://ahmednasser9060.github.io/AhmedNasser9060/
 - CV: https://drive.google.com/file/d/1BBbmk1vYyOvdeh6VGN8_-WPvaSf4Zt9v/view?usp=sharing
 - GitHub: https://github.com/AhmedNasser9060
 - LinkedIn: https://linkedin.com/in/ahmad-nasser-eldin/
