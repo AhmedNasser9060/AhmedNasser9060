@@ -785,8 +785,9 @@ textarea {
     position: relative;
     margin: 0;
     font-size: 0.9rem;
-    line-height: 1.75;
-    display: none;
+    line-height: 1.85;
+    direction: rtl;
+    text-align: right;
 }
 
 .testimonial-card strong {
@@ -795,36 +796,40 @@ textarea {
     margin-top: 0.55rem;
     color: var(--accent-deep);
     font-weight: 700;
-    display: none;
+    direction: rtl;
+    text-align: right;
 }
 
-.testimonial-card::after {
-    position: relative;
-    display: block;
+.translate-btn {
+    position: absolute;
+    bottom: 0.6rem;
+    left: 0.6rem;
+    z-index: 3;
+    min-width: 32px;
+    height: 22px;
+    padding: 0 0.4rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface-strong);
     color: var(--muted);
-    font-size: 0.9rem;
-    line-height: 1.75;
-    white-space: pre-line;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    line-height: 1;
 }
 
-.testimonial-card:nth-child(1)::after {
-    content: "احنا جربنا الابكليشن وهو تحفه بصراحه وسريع، وكنت بترد علينا بسرعه ومتعاون معانا جدا.\A بجد شكرا يا احمد وربنا يوفقك.";
+.translate-btn:hover {
+    background: var(--accent-soft);
+    color: var(--accent-deep);
+    border-color: var(--accent);
 }
 
-.testimonial-card:nth-child(2)::after {
-    content: "تسلم ايدك بجد، شغل حضرتك حلو والتعديلات اللي كنا بنقولها كنت بتعملها بالضبط.";
-}
-
-.testimonial-card:nth-child(3)::after {
-    content: "الابلكيشن تحفه والله، حضرتك كنت متعاون معانا أوي وشخصية محترمة وكلك زوق.";
-}
-
-.testimonial-card:nth-child(4)::after {
-    content: "الابلكيشن تحفه بجد، وفي سرعة في التعديلات. ربنا يباركلك وتسلم أيدك.";
-}
-
-.testimonial-card:nth-child(5)::after {
-    content: "جزاك الله خير يا مهندس احمد على الابلكيشن الجميل وسرعة استجابتك لتعديلاتنا.";
+.translate-btn.is-translated {
+    background: var(--accent-soft);
+    color: var(--accent-deep);
+    border-color: var(--accent);
 }
 
 .featured-testimonial {
@@ -1156,43 +1161,9 @@ body {
     transform: none;
 }
 
-.testimonial-card p,
-.testimonial-card strong {
-    display: none;
-}
-
 .testimonial-card::before {
     font-size: 2rem;
     opacity: 0.12;
-}
-
-.testimonial-card::after {
-    position: relative;
-    display: block;
-    color: var(--muted);
-    font-size: 0.86rem;
-    line-height: 1.7;
-    white-space: pre-line;
-}
-
-.testimonial-card:nth-child(1)::after {
-    content: "\627\62D\646\627 \62C\631\628\646\627 \627\644\627\628\644\643\64A\634\646 \648\647\648 \62A\62D\641\647 \628\635\631\627\62D\647 \648\633\631\64A\639\60C \648\643\646\62A \628\62A\631\62F \639\644\64A\646\627 \628\633\631\639\647 \648\645\62A\639\627\648\646 \645\639\627\646\627 \62C\62F\627.";
-}
-
-.testimonial-card:nth-child(2)::after {
-    content: "\62A\633\644\645 \627\64A\62F\643 \628\62C\62F\60C \634\63A\644 \62D\636\631\62A\643 \62D\644\648 \648\627\644\62A\639\62F\64A\644\627\62A \627\644\644\64A \643\646\627 \628\646\642\648\644\647\627 \643\646\62A \628\62A\639\645\644\647\627 \628\627\644\636\628\637.";
-}
-
-.testimonial-card:nth-child(3)::after {
-    content: "\627\644\627\628\644\643\64A\634\646 \62A\62D\641\647 \648\627\644\644\647\60C \62D\636\631\62A\643 \643\646\62A \645\62A\639\627\648\646 \645\639\627\646\627 \623\648\64A \648\634\62E\635\64A\629 \645\62D\62A\631\645\629 \648\643\644\643 \630\648\642.";
-}
-
-.testimonial-card:nth-child(4)::after {
-    content: "\627\644\627\628\644\643\64A\634\646 \62A\62D\641\647 \628\62C\62F\60C \648\641\64A \633\631\639\629 \641\64A \627\644\62A\639\62F\64A\644\627\62A. \631\628\646\627 \64A\628\627\631\643\644\643 \648\62A\633\644\645 \623\64A\62F\643.";
-}
-
-.testimonial-card:nth-child(5)::after {
-    content: "\62C\632\627\643 \627\644\644\647 \62E\64A\631 \64A\627 \645\647\646\62F\633 \627\62D\645\62F \639\644\649 \627\644\627\628\644\643\64A\634\646 \627\644\62C\645\64A\644 \648\633\631\639\629 \627\633\62A\62C\627\628\62A\643 \644\62A\639\62F\64A\644\627\62A\646\627.";
 }
 
 /* Larger hero portrait area */
