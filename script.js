@@ -164,3 +164,30 @@ function updateActiveLink() {
 
 window.addEventListener("scroll", updateActiveLink);
 window.addEventListener("load", updateActiveLink);
+
+document.querySelectorAll(".translate-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const card = btn.closest(".testimonial-card");
+        const p = card.querySelector("p");
+        const strong = card.querySelector("strong");
+        const isTranslated = btn.classList.toggle("is-translated");
+
+        if (isTranslated) {
+            btn.textContent = "AR";
+            btn.setAttribute("aria-label", "Switch to Arabic");
+            if (p) { p.textContent = p.dataset.en; }
+            if (strong) { strong.textContent = strong.dataset.en; }
+        } else {
+            btn.textContent = "EN";
+            btn.setAttribute("aria-label", "Translate to English");
+            if (p) { p.textContent = p.dataset.ar || p.textContent; }
+            if (strong) { strong.textContent = strong.dataset.ar || strong.textContent; }
+        }
+    });
+
+    const card = btn.closest(".testimonial-card");
+    const p = card.querySelector("p");
+    const strong = card.querySelector("strong");
+    if (p) p.dataset.ar = p.textContent;
+    if (strong) strong.dataset.ar = strong.textContent;
+});
